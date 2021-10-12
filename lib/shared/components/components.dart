@@ -348,9 +348,7 @@ Widget myDivider() => Padding(
       ),
     );
 
-Widget buildArticleItem(article, context) {
-  print(article['urlToImage']);
-  return InkWell(
+Widget buildArticleItem(article, context) => InkWell(
     onTap: () => navigateTo(context, WebViewScreen(url: article['url'])),
     child: Padding(
       padding: const EdgeInsets.all(20.0),
@@ -435,7 +433,6 @@ Widget buildArticleItem(article, context) {
       ),
     ),
   );
-}
 
 /* Widget articleBuilder(list) => ConditionalBuilder(
       condition: list.length > 0,

@@ -17,7 +17,6 @@ class CacheHelper {
   static dynamic getData({
     required String key,
   }) {
-    // sharedPreferences.setBool('isDark', false);
     return sharedPreferences.get(key);
   }
 
