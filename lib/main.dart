@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shop/modules/native_code.dart';
 
 import 'layout/todo_app/todo_layout.dart';
 import 'news_home_screen.dart';
@@ -18,6 +19,18 @@ import 'modules/bmi_app/bmi/bmi_screen.dart';
 import 'modules/shop_app/login/shop_login_screen.dart';
 
 void main() async {
+  // login
+
+  // 1. checkout master
+  // 2. update master
+  // 3. create branch
+  // 4. code ....
+  // 5. commit
+  // 6. checkout master
+  // 7. update master
+  // 8. checkout your local branch
+  // 9. merge master with my current branch
+  // 10. push
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = MyBlocObserver();
   DioHelper.init();
@@ -44,7 +57,6 @@ void main() async {
     widget = const OnBoardingScreen();
 
   // runApp(const SplashScreen());
-  // runApp(const MyApp());
   runApp(MyApp(
     isDark: isDark,
     startWidget: widget,
@@ -52,9 +64,9 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  bool?isDark;
-  Widget? startWidget;
-  MyApp({
+  final bool? isDark;
+  final Widget? startWidget;
+  const MyApp({
     Key? key,
     required this.isDark,
     required this.startWidget,
